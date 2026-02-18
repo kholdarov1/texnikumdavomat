@@ -18,7 +18,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://davomat2026.netlify.app/"
+        "https://davomatuzz.netlify.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -208,4 +208,5 @@ def export_today():
             "spreadsheetml.sheet"
         ),
     )
+
 
