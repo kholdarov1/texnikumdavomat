@@ -20,7 +20,7 @@ app.add_middleware(
     allow_origins=[
         "https://davomatuzz.netlify.app"
     ],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -208,6 +208,7 @@ def export_today():
             "spreadsheetml.sheet"
         ),
     )
+
 
 
 
