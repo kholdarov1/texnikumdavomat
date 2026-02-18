@@ -17,11 +17,14 @@ app = FastAPI()
 # 🔓 CORS – Netlify yoki boshqa domenlardan murojaat qilish uchun
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],      # keyin xohlasang bu yerga faqat Netlify domenini qo'yamiz
+    allow_origins=[
+        "https://davomat2026.netlify.app/"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 DATA_DIR = "data"
 IMAGES_DIR = os.path.join(DATA_DIR, "images")
@@ -205,3 +208,4 @@ def export_today():
             "spreadsheetml.sheet"
         ),
     )
+
